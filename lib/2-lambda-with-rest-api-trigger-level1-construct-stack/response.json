@@ -1,7 +1,7 @@
 {
   "statusCode": 200,
   "body": {
-    "event": { "name": "Bob" },
+    "event": {},
     "result": [
       {
         "userId": 1,

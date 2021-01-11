@@ -9,7 +9,7 @@
     "lint-and-fix": "eslint . --ext .ts --fix",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "build": "npx tsc",
-    "postbuild": "cp package.json package-lock.json dist/ && cd dist && npm install --only=production"
+    "postbuild": "cp package.json package-lock.json dist/ && cd dist && npm install --only=production && zip -r function.zip . && aws s3 cp function.zip s3://fullstack-dev-lambda-package"
   },
   "keywords": [],
   "author": "",
