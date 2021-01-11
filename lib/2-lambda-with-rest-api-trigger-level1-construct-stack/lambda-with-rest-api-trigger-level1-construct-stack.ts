@@ -65,7 +65,7 @@ export class LambdaWithRestApiTriggerL1ConstructStack extends cdk.Stack {
     );
 
     const triggerRestApiMethod = new CfnMethod(this, 'TriggerRestApiMethod', {
-      httpMethod: 'GET',
+      httpMethod: 'POST',
       restApiId: triggerRestApi.ref,
       resourceId: triggerRestApiResource.ref,
       authorizationType: 'NONE',
