@@ -5,7 +5,7 @@ export const handler = async (event: APIGatewayEvent): Promise<unknown> => {
   const result = await axios.get('https://jsonplaceholder.typicode.com/todos');
   return {
     statusCode: 200,
-    headers: { header: event.headers },
-    body: { input: event.body, result: result.data }
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    body: JSON.stringify({ input: event.body, result: result.data })
   };
 };
