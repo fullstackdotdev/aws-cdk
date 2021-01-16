@@ -12,5 +12,5 @@
 # test an API gateway using  curl
 curl -X POST \
     -d @request.json \
-    https://1ynkl78wv9.execute-api.us-east-1.amazonaws.com/prod/todos \
+    https://dxi2zzpzo5.execute-api.us-east-1.amazonaws.com/prod/todos \
     -o response.json # -H "Accept: application/json" -H "Content-Type: application/json" \

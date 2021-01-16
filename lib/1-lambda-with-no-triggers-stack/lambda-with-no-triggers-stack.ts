@@ -10,7 +10,9 @@ export class LambdaWithNoTriggersStack extends cdk.Stack {
      */
     new lambda.Function(this, 'LambdaWithNoTriggers', {
       runtime: lambda.Runtime.NODEJS_12_X,
-      code: lambda.Code.fromAsset('lib/shared/lambda/dist/function.zip'),
+      code: lambda.Code.fromAsset(
+        'lib/1-lambda-with-no-triggers-stack/lambda/dist/function.zip'
+      ),
       handler: 'index.handler',
       functionName: 'LambdaWithNoTriggers'
     });
