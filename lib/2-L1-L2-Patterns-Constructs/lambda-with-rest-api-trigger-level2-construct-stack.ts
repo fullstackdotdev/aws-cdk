@@ -35,7 +35,8 @@ export class LambdaWithRestApiTriggerL2ConstructStack extends cdk.Stack {
       handler: 'index.handler',
       functionName: 'LambdaWithRestApiTriggerL2Construct'
     });
-    // define Resource policy to allow API-Gateway service for invoking lambda function
+
+    // define a Resource policy to allow API-Gateway service for invoking lambda function
     todoFunction.addPermission('permission', {
       action: 'lambda:InvokeFunction',
       sourceArn: `arn:aws:execute-api:us-east-1:${process.env.AWS_ACCOUNT_NUMBER}:${toDoRestApi.restApiId}/*/*/todos`,
