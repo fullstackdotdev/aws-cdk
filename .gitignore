@@ -11,3 +11,4 @@ dist
 !lib/*
 lib/**/dist
 lib/**/node_modules
+lib/1-lambda-with-no-triggers-stack/response.json

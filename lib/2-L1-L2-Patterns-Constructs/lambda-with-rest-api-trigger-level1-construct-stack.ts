@@ -43,7 +43,7 @@ export class LambdaWithRestApiTriggerL1ConstructStack extends cdk.Stack {
         s3Key: 'function.zip'
       },
       role: todoFunctionRole.attrArn,
-      runtime: 'nodejs12.x',
+      runtime: 'nodejs14.x',
       handler: 'index.handler',
       functionName: 'LambdaWithRestApiTriggerL1Construct'
     });
